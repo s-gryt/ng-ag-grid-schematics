@@ -1,0 +1,3 @@
+{
+  "*.{ts,html,yml}": ["prettier --write", "eslint --cache --fix"]
+}
