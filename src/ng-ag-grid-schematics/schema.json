@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "ngAgGridSchematics",
+  "title": "Angular AG Grid Schematics",
+  "type": "object",
+  "properties": {}
+}

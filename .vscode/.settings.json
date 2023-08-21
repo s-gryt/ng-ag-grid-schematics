@@ -1,0 +1,8 @@
+{
+  "editor.codeActionsOnSave": { "source.fixAll": true },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "eslint.validate": ["html", "typescript", "yaml"],
+  "stylelint.validate": ["scss"]
+}

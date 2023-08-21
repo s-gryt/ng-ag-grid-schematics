@@ -1,0 +1,11 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "ng-ag-grid-schematics": {
+      "description": "Angular AG Grid Schematics",
+      "factory": "./ng-ag-grid-schematics/index#ngAgGridSchematics",
+      "schema": "./ng-ag-grid-schematics/schema.json",
+      "aliases": ["nags"]
+    }
+  }
+}

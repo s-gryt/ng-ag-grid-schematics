@@ -1,0 +1,8 @@
+!*.d.ts
+*.ts
+.*
+.github/
+.husky/
+.vscode/
+CONTRIBUTING.md
+node_modules/

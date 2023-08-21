@@ -1,0 +1,23 @@
+{
+  "default": true,
+  "MD003": {
+    "style": "atx"
+  },
+  "MD007": {
+    "indent": 2
+  },
+  "MD013": {
+    "line-length": false
+  },
+  "MD025": {
+    "front_matter_title": false
+  },
+  "MD033": {
+    "allowed_elements": [
+      "figure",
+      "video"
+    ]
+  },
+  "no-hard-tabs": false,
+  "whitespace": false
+}
