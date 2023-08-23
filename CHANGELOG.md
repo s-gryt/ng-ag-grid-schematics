@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/Sgryts/ng-ag-grid-schematics/compare/v1.0.0...v1.0.1) (2023-08-23)
+
+
+### Bug Fixes
+
+* **release:** rearrange plugins in .releaserc ([#6](https://github.com/Sgryts/ng-ag-grid-schematics/issues/6)) ([3e15719](https://github.com/Sgryts/ng-ag-grid-schematics/commit/3e15719f9888444a4ab75189dc72aa7e77f8de55))
+
 # 1.0.0 (2023-08-21)
 
 
