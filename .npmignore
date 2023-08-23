@@ -6,3 +6,4 @@
 .vscode/
 CONTRIBUTING.md
 node_modules/
+src/ng-ag-grid-schematics/tests/
