@@ -3,5 +3,93 @@
   "$id": "ngAgGridSchematics",
   "title": "Angular AG Grid Schematics",
   "type": "object",
-  "properties": {}
+  "properties": {
+    "sourceDir": {
+      "type": "string",
+      "default": "src",
+      "description": "The directory where the component will be generated."
+    },
+    "name": {
+      "default": "grid",
+      "description": "The name of the component.",
+      "type": "string",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": {
+        "message": "What name would you like to use for the component?",
+        "description": "Please enter a name for your component."
+      }
+    },
+    "path": {
+      "description": "The path where you want to generate the component.",
+      "type": "string",
+      "$default": {
+        "$source": "argv",
+        "index": 1
+      },
+      "x-prompt": {
+        "message": "Enter the path for the component:",
+        "description": "Please specify the path where you want to generate the component."
+      }
+    },
+    "style": {
+      "description": "The file extension or preprocessor to use for style files.",
+      "type": "string",
+      "default": "css",
+      "enum": ["", "css", "scss"],
+      "x-prompt": {
+        "message": "Which stylesheet format would you like to use?",
+        "description": "Select a stylesheet format for your component.",
+        "type": "list",
+        "items": [
+          {
+            "value": "",
+            "label": "No stylesheet",
+            "description": "Do not include a stylesheet."
+          },
+          {
+            "value": "css",
+            "label": "CSS",
+            "description": "Use CSS for styling."
+          },
+          {
+            "value": "scss",
+            "label": "SCSS   [ https://sass-lang.com/documentation/syntax#scss ]",
+            "description": "Use SCSS for styling. [ Learn more about SCSS ](https://sass-lang.com/documentation/syntax#scss)"
+          }
+        ]
+      }
+    },
+    "state": {
+      "description": "The state management option to preserve changes in a grid component.",
+      "type": "string",
+      "default": "component-store",
+      "enum": ["", "component-store", "component-store-with-entity-adapter"],
+      "x-prompt": {
+        "message": "Which state management option would you like to use?",
+        "description": "Select a state management option for preserving changes in your grid component.",
+        "type": "list",
+        "items": [
+          {
+            "value": "",
+            "label": "No State",
+            "description": "Do not use state management."
+          },
+          {
+            "value": "component-store",
+            "label": "Component Store                      [ https://ngrx.io/guide/component-store   ]",
+            "description": "Use [Component Store](https://ngrx.io/guide/component-store) for state management."
+          },
+          {
+            "value": "component-store-with-entity-adapter",
+            "label": "Component Store with EntityAdapter   [ https://ngrx.io/guide/entity            ]",
+            "description": "Use [Component Store with EntityAdapter](https://ngrx.io/guide/entity) for state management."
+          }
+        ]
+      }
+    }
+  },
+  "required": ["name", "path"]
 }
