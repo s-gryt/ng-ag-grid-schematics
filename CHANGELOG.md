@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/s-gryt/ng-ag-grid-schematics/compare/v1.0.1...v1.1.0) (2023-09-17)
+
+
+### Features
+
+* enhance ag grid schematic configuration ([#23](https://github.com/s-gryt/ng-ag-grid-schematics/issues/23)) ([e54a3f1](https://github.com/s-gryt/ng-ag-grid-schematics/commit/e54a3f130ddbf88a7b292cc71c48f8889eeceffb))
+
 ## [1.0.1](https://github.com/Sgryts/ng-ag-grid-schematics/compare/v1.0.0...v1.0.1) (2023-08-23)
 
 
