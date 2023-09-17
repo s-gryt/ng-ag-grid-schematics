@@ -6,8 +6,9 @@
  */
 import '@total-typescript/ts-reset';
 import { Rule, SchematicContext, Tree } from '@angular-devkit/schematics';
+import { Schema } from './schema';
 
-export function ngAgGridSchematics(_options: unknown): Rule {
+export function ngAgGridSchematics(_options: Schema): Rule {
   return (tree: Tree, _context: SchematicContext) => {
     return tree;
   };
