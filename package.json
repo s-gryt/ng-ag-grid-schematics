@@ -15,9 +15,21 @@
     "test": "npm run build && jasmine src/**/*_spec.js"
   },
   "keywords": [
-    "schematics"
+    "ag-grid-integration",
+    "ag-grid",
+    "angular-cli",
+    "angular-component",
+    "angular-development",
+    "angular-schematics",
+    "angular",
+    "code-generation",
+    "component-generator",
+    "data-grid",
+    "frontend-development",
+    "schematics",
+    "typescript"
   ],
-  "author": "Sgryts",
+  "author": "Sergii Grytsaienko",
   "license": "MIT",
   "schematics": "./src/collection.json",
   "dependencies": {
@@ -50,5 +62,21 @@
     "stylelint": "^15.10.3",
     "stylelint-config-standard": "^34.0.0",
     "stylelint-config-standard-scss": "^10.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/s-gryt/ng-ag-grid-schematics"
+  },
+  "bugs": {
+    "url": "https://github.com/s-gryt/ng-ag-grid-schematics/issues"
+  },
+  "docs": "https://github.com/s-gryt/ng-ag-grid-schematics/blob/main/README.md",
+  "homepage": "https://github.com/s-gryt/ng-ag-grid-schematics",
+  "contributors": [
+    {
+      "name": "Sergii Grytsaienko",
+      "email": "sergiigrytsaienko@gmail.com",
+      "url": "https://github.com/s-gryt"
+    }
+  ]
 }
