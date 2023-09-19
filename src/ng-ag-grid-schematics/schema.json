@@ -4,11 +4,6 @@
   "title": "Angular AG Grid Schematics",
   "type": "object",
   "properties": {
-    "sourceDir": {
-      "type": "string",
-      "default": "src",
-      "description": "The directory where the component will be generated."
-    },
     "name": {
       "default": "grid",
       "description": "The name of the component.",
@@ -32,6 +27,18 @@
       "x-prompt": {
         "message": "Enter the path for the component:",
         "description": "Please specify the path where you want to generate the component."
+      }
+    },
+    "project": {
+      "description": "Specifies the project to run the schematic in.",
+      "type": "string",
+      "$default": {
+        "$source": "argv",
+        "index": 1
+      },
+      "x-prompt": {
+        "message": "Enter the path for the project:",
+        "description": "Please specify the project to run the schematic in."
       }
     },
     "style": {
@@ -66,14 +73,18 @@
       "description": "The state management option to preserve changes in a grid component.",
       "type": "string",
       "default": "component-store",
-      "enum": ["", "component-store", "component-store-with-entity-adapter"],
+      "enum": [
+        "no-state",
+        "component-store",
+        "component-store-with-entity-adapter"
+      ],
       "x-prompt": {
         "message": "Which state management option would you like to use?",
         "description": "Select a state management option for preserving changes in your grid component.",
         "type": "list",
         "items": [
           {
-            "value": "",
+            "value": "no-state",
             "label": "No State",
             "description": "Do not use state management."
           },
@@ -91,5 +102,5 @@
       }
     }
   },
-  "required": ["name", "path"]
+  "required": ["name", "path", "project"]
 }
