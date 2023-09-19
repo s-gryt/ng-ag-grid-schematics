@@ -1,3 +1,7 @@
 *.d.ts
 *.js
 *.js.map
+
+# TODO: These files are temporarily excluded from linting and formatting.
+#       Please revisit and address any issues later.
+**/__name@dasherize__.component.ts
