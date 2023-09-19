@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/s-gryt/ng-ag-grid-schematics/compare/v1.1.0...v1.2.0) (2023-09-19)
+
+
+### Features
+
+* add schematic and ag-grid dependencies ([c47a81e](https://github.com/s-gryt/ng-ag-grid-schematics/commit/c47a81ea5e8aded2c7647eaaeabc6603a486b421))
+* **schema:** update schema for project configuration ([f495ec0](https://github.com/s-gryt/ng-ag-grid-schematics/commit/f495ec0bd8d12ab44c3ca8d74a328634e95d71de))
+
 # [1.1.0](https://github.com/s-gryt/ng-ag-grid-schematics/compare/v1.0.1...v1.1.0) (2023-09-17)
 
 
