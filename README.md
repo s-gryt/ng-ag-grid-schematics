@@ -1,31 +1,52 @@
-# Getting Started With Schematics
+# ng-ag-grid-schematics Guide
 
-This repository is a basic Schematic implementation that serves as a starting point to create and publish Schematics to NPM.
+## Installation
 
-### Testing
-
-To test locally, install `@angular-devkit/schematics-cli` globally and use the `schematics` command line tool. That tool acts the same as the `generate` command of the Angular CLI, but also has a debug mode.
-
-Check the documentation with
+Install `ng-ag-grid-schematics` from npm to your Angular project:
 
 ```bash
-schematics --help
+ng add ng-ag-grid-schematics
 ```
 
-### Unit Testing
+This command will add `ng-ag-grid-schematics` to your project and configure it for use.
 
-`npm run test` will run the unit tests, using Jasmine as a runner and test framework.
+## Running the Schematic
 
-### Publishing
-
-To publish, simply do:
+Generate ag-Grid components and configure your project by running the following command:
 
 ```bash
-npm run build
-npm publish
+ng generate ng-ag-grid-schematics:nags
 ```
 
-That's it!
+This command will launch a series of prompts to help you configure and generate ag-Grid components.
+
+## Input Configuration
+
+You will be prompted to provide the following inputs:
+
+- **Name:** Enter a name for your ag-Grid component.
+
+- **Path:** Specify the path where you want to generate the component.
+
+- **Project:** Choose the project in which you want to run the schematic.
+
+## Styling and State Management
+
+You will also be prompted to configure the styling and state management for your ag-Grid component:
+
+- **Style:** Select the stylesheet format for your component. You can choose between "No stylesheet," "CSS," or "SCSS."
+
+- **State Management:** Choose a state management option for preserving changes in your grid component. Options include "No State," "Component Store," and "Component Store with EntityAdapter."
+
+## File Generation
+
+After providing the necessary inputs and configuration, the schematic will generate the following files and perform the following actions:
+
+- Generate ag-Grid component files based on your inputs (component, template, styles).
+
+- Add ag-Grid styles to your project's root styles file (styles.css or styles.scss).
+
+- Add ag-Grid dependencies to your project's `package.json` file.
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Sgryts/ng-ag-grid-schematics/blob/main/LICENSE)
 ![GitHub Workflow Status](https://github.com/Sgryts/ng-ag-grid-schematics/actions/workflows/release.yml/badge.svg)
