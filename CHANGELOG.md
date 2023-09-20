@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/s-gryt/ng-ag-grid-schematics/compare/v1.3.6...v1.4.0) (2023-09-20)
+
+
+### Features
+
+* **schematics:** add 'ng-add' schematic to collection ([abc9f39](https://github.com/s-gryt/ng-ag-grid-schematics/commit/abc9f39a9855f1d616dda3698cfd62417da3aa80))
+
 ## [1.3.6](https://github.com/s-gryt/ng-ag-grid-schematics/compare/v1.3.5...v1.3.6) (2023-09-20)
 
 
