@@ -1,3 +1,10 @@
+## [1.3.4](https://github.com/s-gryt/ng-ag-grid-schematics/compare/v1.3.3...v1.3.4) (2023-09-20)
+
+
+### Bug Fixes
+
+* **deps:** optimize dependencies and reduce bundle size ([aaa78c7](https://github.com/s-gryt/ng-ag-grid-schematics/commit/aaa78c7e96064acf73ea7c1157e2f2a99c527280))
+
 ## [1.3.3](https://github.com/s-gryt/ng-ag-grid-schematics/compare/v1.3.2...v1.3.3) (2023-09-20)
 
 
