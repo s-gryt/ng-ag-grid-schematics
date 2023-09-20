@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/s-gryt/ng-ag-grid-schematics/compare/v1.3.0...v1.3.1) (2023-09-20)
+
+
+### Bug Fixes
+
+* ensure proper file ignoring in .npmignore ([a0f2965](https://github.com/s-gryt/ng-ag-grid-schematics/commit/a0f29657ea95535ff21001a29106756c1abf3bd8))
+
 # [1.3.0](https://github.com/s-gryt/ng-ag-grid-schematics/compare/v1.2.0...v1.3.0) (2023-09-20)
 
 
