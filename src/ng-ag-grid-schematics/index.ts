@@ -107,7 +107,7 @@ function addImportsToStyles(
       }
     } else {
       _context.logger.error(
-        'styles.scss file not found. Make sure the path is correct.'
+        `styles.${style} file not found. Make sure the path is correct.`
       );
     }
 
