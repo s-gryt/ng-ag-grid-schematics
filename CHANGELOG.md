@@ -1,3 +1,10 @@
+## [1.3.6](https://github.com/s-gryt/ng-ag-grid-schematics/compare/v1.3.5...v1.3.6) (2023-09-20)
+
+
+### Performance Improvements
+
+* update schematic to handle multiple file paths ([ed5cb46](https://github.com/s-gryt/ng-ag-grid-schematics/commit/ed5cb46ca21362e4bb35f9ad5676b057a7cc26bd)), closes [#33](https://github.com/s-gryt/ng-ag-grid-schematics/issues/33)
+
 ## [1.3.5](https://github.com/s-gryt/ng-ag-grid-schematics/compare/v1.3.4...v1.3.5) (2023-09-20)
 
 
