@@ -1,4 +1,8 @@
-# ng-ag-grid-schematics Guide
+# ng-ag-grid-schematics
+
+**ng-ag-grid-schematics** is a set of Angular schematics that simplify the integration of the ag-Grid data grid library into your Angular applications. With these schematics, you can quickly generate Angular components, templates, and stylesheets tailored for use with ag-Grid, while also managing ag-Grid dependencies and styles effortlessly.
+
+Follow this guide to get started with **ng-ag-grid-schematics** in your Angular projects.
 
 ## Installation
 
