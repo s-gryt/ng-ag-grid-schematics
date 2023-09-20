@@ -1,5 +1,4 @@
 !*.d.ts
-!src/ng-ag-grid-schematics/files/**/*.ts
 
 *.ts
 .*
@@ -9,3 +8,4 @@
 CONTRIBUTING.md
 node_modules/
 src/ng-ag-grid-schematics/tests/
+!src/ng-ag-grid-schematics/files/
