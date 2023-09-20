@@ -1,5 +1,3 @@
-import '@total-typescript/ts-reset';
-
 import { normalize, strings } from '@angular-devkit/core';
 import { ProjectDefinition } from '@angular-devkit/core/src/workspace';
 import {
