@@ -98,9 +98,11 @@ function addImportsToStyles(
 
       if (
         content.includes('~ag-grid-community/styles/ag-grid.css') &&
-        content.includes('ag-grid-community/styles/ag-theme-alpine.css')
+        content.includes('~ag-grid-community/styles/ag-theme-alpine.css')
       ) {
-        _context.logger.info('Imports already exist in styles.scss. Skipping.');
+        _context.logger.info(
+          `Imports already exist in styles.${style}. Skipping.`
+        );
       } else {
         const updatedContent = `@import '~ag-grid-community/styles/ag-grid.css';\n@import '~ag-grid-community/styles/ag-theme-alpine.css';\n${content}`;
         tree.overwrite(stylesPath, updatedContent);
