@@ -7,5 +7,9 @@
       "schema": "./ng-ag-grid-schematics/schema.json",
       "aliases": ["nags"]
     }
+  },
+  "ng-add": {
+    "description": "Add AG Grid Schematics to Angular project",
+    "factory": "./path/to/ng-add/index#ngAdd"
   }
 }
