@@ -29,21 +29,26 @@ export function ngAgGridSchematics(_options: Schema): Rule {
       strings.dasherize(`${appRoot}${path}/${name}`)
     );
 
-    const files = url(`./files/${state}/${style}`);
-    const newTree = apply(files, [
-      move(folderPath),
-      template({
-        ...strings,
-        ..._options
-      })
-    ]);
+    const paths = [`./files/state/${state}`, `./files/style/${style}`];
 
-    const templateRule = mergeWith(newTree, MergeStrategy.Default);
+    const rules = paths.map(path => {
+      const files = url(path);
+      const newTree = apply(files, [
+        move(folderPath),
+        template({
+          ...strings,
+          ..._options
+        })
+      ]);
+      return mergeWith(newTree, MergeStrategy.Default);
+    });
+
     const chainedRule = chain([
-      templateRule,
+      ...rules,
       addAgGridDependencies(),
       addImportsToStyles(style, sourceRoot)
     ]);
+
     return chainedRule(tree, _context);
   };
 }
