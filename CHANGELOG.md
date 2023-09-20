@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/s-gryt/ng-ag-grid-schematics/compare/v1.2.0...v1.3.0) (2023-09-20)
+
+
+### Features
+
+* update README.md ([7489461](https://github.com/s-gryt/ng-ag-grid-schematics/commit/74894612bad98a8b1c75303ec9ab2bab30e05158))
+
 # [1.2.0](https://github.com/s-gryt/ng-ag-grid-schematics/compare/v1.1.0...v1.2.0) (2023-09-19)
 
 
