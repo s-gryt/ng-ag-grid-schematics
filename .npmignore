@@ -1,4 +1,6 @@
 !*.d.ts
+!src/ng-ag-grid-schematics/files/**/*.ts
+
 *.ts
 .*
 .github/
