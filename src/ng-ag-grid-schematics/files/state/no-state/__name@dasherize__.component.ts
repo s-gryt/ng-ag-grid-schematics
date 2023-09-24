@@ -7,8 +7,8 @@ import { AgGridModule } from 'ag-grid-angular';
   selector: 'app-<%= dasherize(name) %>',
   standalone: true,
   imports: [CommonModule, AgGridModule],
-  templateUrl: './app-<%= dasherize(name) %>.component.html',
-  styleUrls: ['./app-<%= dasherize(name) %>.component.scss'],
+  templateUrl: './<%= dasherize(name) %>.component.html',
+  styleUrls: ['./<%= dasherize(name) %>.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class <%= classify(name) %>Component<T> {
