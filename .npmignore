@@ -8,6 +8,14 @@ CONTRIBUTING.md
 node_modules/
 src/ng-ag-grid-schematics/tests/
 
+# Exclude TypeScript source files
+# These .ts files are excluded from the npm package to reduce package size.
+
+add-import-to-styles.ts
+add-npm-dependencies.ts
+get-project.ts
+get-workspace.ts
 index_spec.ts
 index.ts
 schema.ts
+types.ts
