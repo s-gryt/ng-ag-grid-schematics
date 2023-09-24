@@ -1,5 +1,4 @@
 import { normalize, strings } from '@angular-devkit/core';
-import { ProjectDefinition } from '@angular-devkit/core/src/workspace';
 import {
   apply,
   chain,
@@ -8,15 +7,16 @@ import {
   move,
   Rule,
   SchematicContext,
-  SchematicsException,
   template,
   Tree,
   url
 } from '@angular-devkit/schematics';
 
 import { Schema } from './schema';
-
-type Workspace = { projects: { [key: string]: ProjectDefinition } };
+import { addAgGridDependencies } from './tools/no-state';
+import { addImportsToStyles } from './tools/shared/add-import-to-styles';
+import { getProject } from './tools/shared/get-project';
+import { getWorkspace } from './tools/shared/get-workspace';
 
 export function ngAgGridSchematics(_options: Schema): Rule {
   const { name, path, project, state, style } = _options;
@@ -50,69 +50,5 @@ export function ngAgGridSchematics(_options: Schema): Rule {
     ]);
 
     return chainedRule(tree, _context);
-  };
-}
-
-function getWorkspace(tree: Tree): Workspace {
-  const workspace = tree.read('./angular.json');
-  if (!workspace) throw new SchematicsException('angular.json file not found!');
-  return JSON.parse(workspace.toString()) as Workspace;
-}
-
-function getProject(project: string, workspace: Workspace) {
-  return workspace.projects[project];
-}
-
-export function addAgGridDependencies(): Rule {
-  return (tree: Tree, _context: SchematicContext) => {
-    const packageJson = JSON.parse(tree.read('package.json')!.toString()) as {
-      dependencies: Record<string, string>;
-    };
-
-    if (!packageJson.dependencies['ag-grid-angular'])
-      packageJson.dependencies['ag-grid-angular'] = '*';
-
-    if (!packageJson.dependencies['ag-grid-community'])
-      packageJson.dependencies['ag-grid-community'] = '*';
-
-    if (!packageJson.dependencies['ag-grid-enterprise'])
-      packageJson.dependencies['ag-grid-enterprise'] = '*';
-
-    tree.overwrite('package.json', JSON.stringify(packageJson, null, 2));
-    _context.logger.info('Ag-Grid dependencies added to package.json');
-
-    return tree;
-  };
-}
-
-function addImportsToStyles(
-  style: string,
-  sourceRoot: string | undefined
-): Rule {
-  return (tree: Tree, _context: SchematicContext) => {
-    const stylesPath = `${sourceRoot}/styles.${style}`;
-    const stylesFile = tree.read(stylesPath);
-
-    if (stylesFile) {
-      const content = stylesFile.toString('utf-8');
-
-      if (
-        content.includes('~ag-grid-community/styles/ag-grid.css') &&
-        content.includes('~ag-grid-community/styles/ag-theme-alpine.css')
-      ) {
-        _context.logger.info(
-          `Imports already exist in styles.${style}. Skipping.`
-        );
-      } else {
-        const updatedContent = `@import '~ag-grid-community/styles/ag-grid.css';\n@import '~ag-grid-community/styles/ag-theme-alpine.css';\n${content}`;
-        tree.overwrite(stylesPath, updatedContent);
-      }
-    } else {
-      _context.logger.error(
-        `styles.${style} file not found. Make sure the path is correct.`
-      );
-    }
-
-    return tree;
   };
 }
