@@ -6,3 +6,7 @@ node_modules/
 # TODO: These files are temporarily excluded from linting and formatting.
 #       Please revisit and address any issues later.
 **/__name@dasherize__.component.ts
+**/__name@dasherize__.model.ts
+**/__name@dasherize__.service.ts
+**/__name@dasherize__.store.ts
+**/mock.ts
