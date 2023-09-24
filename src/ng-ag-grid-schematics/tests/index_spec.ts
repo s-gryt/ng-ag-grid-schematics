@@ -13,25 +13,57 @@ describe('ng-ag-grid-schematics', () => {
     testTree.create('./angular.json', JSON.stringify(angularJsonStub));
     testTree.create('./package.json', JSON.stringify(packageJsonStub));
   });
-  it('should generate the expected files and configuration for a grid component', async () => {
-    const runner = new SchematicTestRunner('schematics', collectionPath);
-    const tree = await runner.runSchematic(
-      'ng-ag-grid-schematics',
-      {
-        name: 'grid',
-        path: '',
-        project: 'test-project',
-        style: 'css',
-        state: 'no-state'
-      },
-      testTree
-    );
-    expect(tree.files).toEqual([
-      '/angular.json',
-      '/package.json',
-      '/src/app/grid/grid.component.html',
-      '/src/app/grid/grid.component.ts',
-      '/src/app/grid/grid.component.css'
-    ]);
+
+  describe('no-state', () => {
+    it('should generate the expected files and configuration for a grid component', async () => {
+      const runner = new SchematicTestRunner('schematics', collectionPath);
+      const tree = await runner.runSchematic(
+        'ng-ag-grid-schematics',
+        {
+          name: 'grid',
+          path: '',
+          project: 'test-project',
+          style: 'css',
+          state: 'no-state'
+        },
+        testTree
+      );
+      expect(tree.files).toEqual([
+        '/angular.json',
+        '/package.json',
+        '/src/app/grid/grid.component.html',
+        '/src/app/grid/grid.component.ts',
+        '/src/app/grid/grid.component.css'
+      ]);
+    });
+  });
+
+  describe('component-store', () => {
+    it('should generate the expected files and configuration for a grid component', async () => {
+      const runner = new SchematicTestRunner('schematics', collectionPath);
+      const tree = await runner.runSchematic(
+        'ng-ag-grid-schematics',
+        {
+          name: 'grid',
+          path: '',
+          project: 'test-project',
+          style: 'css',
+          state: 'component-store'
+        },
+        testTree
+      );
+
+      expect(tree.files).toEqual([
+        '/angular.json',
+        '/package.json',
+        '/src/app/grid/mock.ts',
+        '/src/app/grid/grid.component.html',
+        '/src/app/grid/grid.component.ts',
+        '/src/app/grid/grid.model.ts',
+        '/src/app/grid/grid.service.ts',
+        '/src/app/grid/grid.store.ts',
+        '/src/app/grid/grid.component.css'
+      ]);
+    });
   });
 });

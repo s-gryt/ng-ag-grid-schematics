@@ -13,8 +13,8 @@ import {
 } from '@angular-devkit/schematics';
 
 import { Schema } from './schema';
-import { addAgGridDependencies } from './tools/no-state';
 import { addImportsToStyles } from './tools/shared/add-import-to-styles';
+import { addNpmDependencies } from './tools/shared/add-npm-dependencies';
 import { getProject } from './tools/shared/get-project';
 import { getWorkspace } from './tools/shared/get-workspace';
 
@@ -45,7 +45,7 @@ export function ngAgGridSchematics(_options: Schema): Rule {
 
     const chainedRule = chain([
       ...rules,
-      addAgGridDependencies(),
+      addNpmDependencies(state),
       addImportsToStyles(style, sourceRoot)
     ]);
 
