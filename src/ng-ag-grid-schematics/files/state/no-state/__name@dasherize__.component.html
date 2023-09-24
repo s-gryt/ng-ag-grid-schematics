@@ -1,0 +1,8 @@
+<div class="grid-container">
+  <ag-grid-angular
+    (gridReady)="onGridReady($event.api, $event.columnApi)"
+    [columnDefs]="columnDefs"
+    [rowData]="rowData"
+    class="ag-theme-alpine"
+    style="width: 700px; height: 500px"></ag-grid-angular>
+</div>

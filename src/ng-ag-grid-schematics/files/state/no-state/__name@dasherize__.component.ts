@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ColDef, ColumnApi, GridApi } from 'ag-grid-enterprise';
 import { AgGridModule } from 'ag-grid-angular';
@@ -8,12 +8,13 @@ import { AgGridModule } from 'ag-grid-angular';
   standalone: true,
   imports: [CommonModule, AgGridModule],
   templateUrl: './app-<%= dasherize(name) %>.component.html',
-  styleUrls: ['./app-<%= dasherize(name) %>.component.scss']
+  styleUrls: ['./app-<%= dasherize(name) %>.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class <%= classify(name) %>Component<T> {
   #gridApi!: GridApi;
 
-  @Input() protected rowData: T;
+  @Input() protected rowData: T[];
 
   @Input() protected columnDefs: ColDef[];
 
