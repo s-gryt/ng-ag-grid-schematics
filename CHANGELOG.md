@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/s-gryt/ng-ag-grid-schematics/compare/v1.5.0...v1.5.1) (2023-09-24)
+
+
+### Bug Fixes
+
+* **npmignore:** exclude ts source files from npm package ([612b260](https://github.com/s-gryt/ng-ag-grid-schematics/commit/612b260ff669b9c0d33f4326c18b3778defa8c3a))
+
 # [1.5.0](https://github.com/s-gryt/ng-ag-grid-schematics/compare/v1.4.1...v1.5.0) (2023-09-24)
 
 
