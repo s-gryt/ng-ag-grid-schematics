@@ -1,3 +1,19 @@
+# [1.5.0](https://github.com/s-gryt/ng-ag-grid-schematics/compare/v1.4.1...v1.5.0) (2023-09-24)
+
+
+### Bug Fixes
+
+* path update for template and styles files ([a188669](https://github.com/s-gryt/ng-ag-grid-schematics/commit/a1886699dad50c1e7e4862ed826773ecedfa2009))
+* **tests:** remove spec file from no-state ([fe706e2](https://github.com/s-gryt/ng-ag-grid-schematics/commit/fe706e2047793156134585d4edaaf03720c7fad5))
+* **tests:** update test suite to include missing template ([4225a14](https://github.com/s-gryt/ng-ag-grid-schematics/commit/4225a1416440e0b6b4ef83d322aafaa5e4fba7ca))
+
+
+### Features
+
+* add component-store option to the main function ([a61113b](https://github.com/s-gryt/ng-ag-grid-schematics/commit/a61113b89bd17b8a579c04ace8666ca7394f140b))
+* **schematics:** add schematic files for component-store state ([2c8671e](https://github.com/s-gryt/ng-ag-grid-schematics/commit/2c8671e0ad886545ce0939a3eeb60e611a9b1f81))
+* **template:** add missing template file for no-state ([1d1c454](https://github.com/s-gryt/ng-ag-grid-schematics/commit/1d1c4544697569b9f40332e01dd831dfa3d22a14))
+
 ## [1.4.1](https://github.com/s-gryt/ng-ag-grid-schematics/compare/v1.4.0...v1.4.1) (2023-09-20)
 
 
