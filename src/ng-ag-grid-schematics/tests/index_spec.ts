@@ -29,7 +29,7 @@ describe('ng-ag-grid-schematics', () => {
     expect(tree.files).toEqual([
       '/angular.json',
       '/package.json',
-      '/src/app/grid/grid.component.spec.ts',
+      '/src/app/grid/grid.component.html',
       '/src/app/grid/grid.component.ts',
       '/src/app/grid/grid.component.css'
     ]);
