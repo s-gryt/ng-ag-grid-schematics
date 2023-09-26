@@ -16,7 +16,7 @@ import { RowData } from './<%= dasherize(name) %>.model';
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, AgGridModule],
-  providers: [GridStore, GridService],
+  providers: [<%= classify(name) %>Store, <%= classify(name) %>Service],
   templateUrl: './<%= dasherize(name) %>.component.html',
   styleUrls: ['./<%= dasherize(name) %>.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -24,18 +24,18 @@ import { RowData } from './<%= dasherize(name) %>.model';
 export class <%= classify(name) %>Component implements OnInit {
   #gridApi!: GridApi;
 
-  #gridStore = inject(GridStore);
-  state$ = this.#gridStore.state$;
+  #<%= camelize(name) %>Store = inject(<%= classify(name) %>Store);
+  state$ = this.#<%= camelize(name) %>Store.state$;
 
   rowData = this.state$.pipe(map((d) => d.data));
   columnDefs = this.state$.pipe(map((d) => d.columnDefs));
 
   ngOnInit(): void {
-    this.#gridStore.load();
+    this.#<%= camelize(name) %>Store.load();
   }
 
   protected onCellValueChanged(params: RowData): void {
-    this.#gridStore.update(params);
+    this.#<%= camelize(name) %>Store.update(params);
   }
 
   protected onGridReady(...params: [api: GridApi, columnApi: ColumnApi]): void {

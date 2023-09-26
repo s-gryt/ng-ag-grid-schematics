@@ -6,18 +6,16 @@ import { of, pipe, switchMap, tap, withLatestFrom } from 'rxjs';
 import { <%= classify(name) %>Service } from './<%= dasherize(name) %>.service';
 import { <%= classify(name) %>State, RowData } from './<%= dasherize(name) %>.model';
 
-const defaultState: <%= classify(name) %>State = {
-  data: [{ id: '' }],
-  columnDefs: columnDefs,
-  status: 'INIT',
-  error: '',
-};
-
 @Injectable()
 export class <%= classify(name) %>Store extends ComponentStore<<%= classify(name) %>State> {
-  #gridService = inject(GridService);
+  #<%= camelize(name) %>Service = inject(<%= classify(name) %>Service);
   constructor() {
-    super(defaultState);
+    super({
+      data: [{ id: '' }],
+      columnDefs: columnDefs,
+      status: 'INIT',
+      error: '',
+    });
   }
 
   public readonly load = this.effect<void>(
@@ -25,7 +23,7 @@ export class <%= classify(name) %>Store extends ComponentStore<<%= classify(name
       tap(() => {
         this.patchState({ status: 'LOADING' });
       }),
-      switchMap(() => this.#gridService.findMany()),
+      switchMap(() => this.#<%= camelize(name) %>Service.findMany()),
       tapResponse(
         (data) => this.patchState({ data, status: 'LOADED' }),
         (error) => this.patchState({ error, status: 'LOADED' })
@@ -38,7 +36,7 @@ export class <%= classify(name) %>Store extends ComponentStore<<%= classify(name
       withLatestFrom(this.select((s) => s.data)),
       tap(() => this.patchState({ status: 'LOADING' })),
       switchMap(([row, rows]) => {
-        this.#gridService.updateOne(row);
+        this.#<%= camelize(name) %>Service.updateOne(row);
 
         return of({ row, rows });
       }),
@@ -63,7 +61,7 @@ export class <%= classify(name) %>Store extends ComponentStore<<%= classify(name
       withLatestFrom(this.select((s) => s.data)),
       tap(() => this.patchState({ status: 'LOADING' })),
       switchMap(([row, rows]) => {
-        this.#gridService.updateOne(row);
+        this.#<%= camelize(name) %>Service.updateOne(row);
 
         return of({ row, rows });
       }),
@@ -94,7 +92,7 @@ export class <%= classify(name) %>Store extends ComponentStore<<%= classify(name
       withLatestFrom(this.select((s) => s.data)),
       tap(() => this.patchState({ status: 'LOADING' })),
       switchMap(([id, rows]) => {
-        this.#gridService.removeOne(id);
+        this.#<%= camelize(name) %>Service.removeOne(id);
 
         return of({ id, rows });
       }),
