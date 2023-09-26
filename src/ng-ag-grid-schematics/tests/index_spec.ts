@@ -66,4 +66,33 @@ describe('ng-ag-grid-schematics', () => {
       ]);
     });
   });
+
+  describe('component-store-with-entity-adapter', () => {
+    it('should generate the expected files and configuration for a grid component', async () => {
+      const runner = new SchematicTestRunner('schematics', collectionPath);
+      const tree = await runner.runSchematic(
+        'ng-ag-grid-schematics',
+        {
+          name: 'grid',
+          path: '',
+          project: 'test-project',
+          style: 'scss',
+          state: 'component-store-with-entity-adapter'
+        },
+        testTree
+      );
+
+      expect(tree.files).toEqual([
+        '/angular.json',
+        '/package.json',
+        '/src/app/grid/mock.ts',
+        '/src/app/grid/grid.component.html',
+        '/src/app/grid/grid.component.ts',
+        '/src/app/grid/grid.model.ts',
+        '/src/app/grid/grid.service.ts',
+        '/src/app/grid/grid.store.ts',
+        '/src/app/grid/grid.component.scss'
+      ]);
+    });
+  });
 });

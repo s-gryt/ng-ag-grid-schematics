@@ -15,9 +15,17 @@ export function addNpmDependencies(state: string): Rule {
     if (!packageJson.dependencies['ag-grid-enterprise'])
       packageJson.dependencies['ag-grid-enterprise'] = '*';
 
-    if (state === 'component-store') {
+    if (
+      state === 'component-store' ||
+      state === 'component-store-with-entity-adapter'
+    ) {
       if (!packageJson.dependencies['@ngrx/component-store'])
         packageJson.dependencies['@ngrx/component-store'] = '*';
+    }
+
+    if (state === 'component-store-with-entity-adapter') {
+      if (!packageJson.dependencies['@ngrx/entity'])
+        packageJson.dependencies['@ngrx/entity'] = '*';
     }
 
     tree.overwrite('package.json', JSON.stringify(packageJson, null, 2));
