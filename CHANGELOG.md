@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/s-gryt/ng-ag-grid-schematics/compare/v1.5.1...v1.6.0) (2023-09-26)
+
+
+### Features
+
+* add component-store-with-entity-adapter option to the main function ([#42](https://github.com/s-gryt/ng-ag-grid-schematics/issues/42)) ([49ad3e7](https://github.com/s-gryt/ng-ag-grid-schematics/commit/49ad3e7f0c7504a25bce36f7cc3cdb86ee2a4299))
+
 ## [1.5.1](https://github.com/s-gryt/ng-ag-grid-schematics/compare/v1.5.0...v1.5.1) (2023-09-24)
 
 
