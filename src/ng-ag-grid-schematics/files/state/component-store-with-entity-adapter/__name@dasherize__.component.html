@@ -1,0 +1,11 @@
+<div class="grid-container">
+  <ag-grid-angular
+    (cellValueChanged)="onCellValueChanged($event.data)"
+    (gridReady)="onGridReady($event.api, $event.columnApi)"
+    [columnDefs]="columnDefs$ | async"
+    [rowData]="rowsList$ | async"
+    class="ag-theme-alpine"
+    style="width: 700px; height: 500px"></ag-grid-angular>
+</div>
+<hr />
+{{ rowsList$ | async | json }}
