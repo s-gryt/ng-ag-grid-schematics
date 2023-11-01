@@ -33,7 +33,7 @@
   "license": "MIT",
   "schematics": "./src/collection.json",
   "dependencies": {
-    "@angular-devkit/core": "^16.1.6",
+    "@angular-devkit/core": "^16.2.6",
     "@angular-devkit/schematics": "^16.1.6"
   },
   "devDependencies": {
