@@ -34,7 +34,7 @@
   "schematics": "./src/collection.json",
   "dependencies": {
     "@angular-devkit/core": "^16.1.6",
-    "@angular-devkit/schematics": "^16.1.6"
+    "@angular-devkit/schematics": "^16.2.8"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
