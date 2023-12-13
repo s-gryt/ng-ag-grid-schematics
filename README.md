@@ -32,7 +32,7 @@ You will be prompted to provide the following inputs:
 
 ```bash
 ...
-? What name would you like to use for the component? data-grid
+? What name would you like to use for the component? my-grid
 ...
 ```
 
@@ -69,6 +69,26 @@ After providing the necessary inputs and configuration, the schematic will gener
 - Add ag-Grid styles to your project's root styles file (styles.css or styles.scss).
 
 - Add ag-Grid dependencies to your project's `package.json` file.
+
+## Example
+
+```bash
+? What name would you like to use for the component? my-grid
+? Enter project name: ng-ag-grid-sa
+? Enter the path for the component: shared/component/ag-grid
+? Which stylesheet format would you like to use? SCSS   [ https://sass-lang.com/documentation/syntax#scss ]
+? Which state management option would you like to use? Component Store                      [ https://ngrx.io/guide/component-store   ]
+    Ag-Grid dependencies added to package.json
+    Imports already exist in styles.scss. Skipping.
+CREATE src/app/shared/component/ag-grid/my-grid/mock.ts (2550 bytes)
+CREATE src/app/shared/component/ag-grid/my-grid/my-grid.component.html (364 bytes)
+CREATE src/app/shared/component/ag-grid/my-grid/my-grid.component.ts (1295 bytes)
+CREATE src/app/shared/component/ag-grid/my-grid/my-grid.model.ts (277 bytes)
+CREATE src/app/shared/component/ag-grid/my-grid/my-grid.service.ts (1122 bytes)
+CREATE src/app/shared/component/ag-grid/my-grid/my-grid.store.ts (3453 bytes)
+CREATE src/app/shared/component/ag-grid/my-grid/my-grid.component.scss (0 bytes)
+UPDATE package.json (1650 bytes)
+```
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Sgryts/ng-ag-grid-schematics/blob/main/LICENSE)
 ![GitHub Workflow Status](https://github.com/Sgryts/ng-ag-grid-schematics/actions/workflows/release.yml/badge.svg)
