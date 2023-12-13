@@ -17,6 +17,18 @@
         "description": "Please enter a name for your component."
       }
     },
+    "project": {
+      "description": "Specifies the project to run the schematic in.",
+      "type": "string",
+      "$default": {
+        "$source": "argv",
+        "index": 1
+      },
+      "x-prompt": {
+        "message": "Enter project name:",
+        "description": "Please specify the project to run the schematic in."
+      }
+    },
     "path": {
       "description": "The path where you want to generate the component.",
       "type": "string",
@@ -27,18 +39,6 @@
       "x-prompt": {
         "message": "Enter the path for the component:",
         "description": "Please specify the path where you want to generate the component."
-      }
-    },
-    "project": {
-      "description": "Specifies the project to run the schematic in.",
-      "type": "string",
-      "$default": {
-        "$source": "argv",
-        "index": 1
-      },
-      "x-prompt": {
-        "message": "Enter the path for the project:",
-        "description": "Please specify the project to run the schematic in."
       }
     },
     "style": {
