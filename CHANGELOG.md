@@ -1,3 +1,10 @@
+## [1.6.2](https://github.com/s-gryt/ng-ag-grid-schematics/compare/v1.6.1...v1.6.2) (2023-12-13)
+
+
+### Bug Fixes
+
+* **readme:** update README.md for ng-ag-grid-schematics ([3877d78](https://github.com/s-gryt/ng-ag-grid-schematics/commit/3877d7844234a89bb9f25a81e178a628bcde8256))
+
 ## [1.6.1](https://github.com/s-gryt/ng-ag-grid-schematics/compare/v1.6.0...v1.6.1) (2023-09-26)
 
 
