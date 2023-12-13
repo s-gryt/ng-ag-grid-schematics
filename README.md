@@ -30,15 +30,33 @@ You will be prompted to provide the following inputs:
 
 - **Name:** Enter a name for your ag-Grid component.
 
-- **Path:** Specify the path where you want to generate the component.
+```bash
+...
+? What name would you like to use for the component? data-grid
+...
+```
 
-- **Project:** Choose the project in which you want to run the schematic.
+- **Project:** Specify the project to run the schematic in. Note: Since Angular 14, the `defaultProject` property has been deprecated, and the default project must be explicitly specified.
+
+```bash
+...
+? Enter project name: my-angular-app
+...
+```
+
+- **Path:** Specify the path where you want to generate the component. The path parameter specifies the location where the component will be generated. This path is relative to the project root `src/app/${path}`.
+
+```bash
+...
+? Enter the path for the component: shared/components/ag-grid
+...
+```
 
 ## Styling and State Management
 
 You will also be prompted to configure the styling and state management for your ag-Grid component:
 
-- **Style:** Select the stylesheet format for your component. You can choose between "No stylesheet," "CSS," or "SCSS."
+- **Style:** Select the stylesheet format for your component. You can choose between "No stylesheet," "CSS," or "SCSS.". Note that your selection should correspond to the `inlineStyleLanguage` configuration in your `angular.json` file.
 
 - **State Management:** Choose a state management option for preserving changes in your grid component. Options include "No State," "Component Store," and "Component Store with EntityAdapter."
 
